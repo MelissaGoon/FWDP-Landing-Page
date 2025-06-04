@@ -2,8 +2,13 @@
 :root {
     --dark-blue: #010E3C;
     --neon-green: #DDFF00;
+    --light-neon-green: #edfb92;
     --blue: #3F00FD;
     --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -23,77 +28,150 @@ h6 {
 }
 
 h1 {
-    font-size: 5rem;
-    margin-bottom: 0;
+    font-size: 3rem;
+    margin: 0;
 }
 
-/* Links*/
-a {}
+h2 {
+    font-size: 2.5rem;
+}
 
-a:visited {}
+h3 {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 47rem) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+}
+
+
+/*# Links #*/
+a {
+    background-color: var(--neon-green);
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+a:visited {
+    background-color: var(--neon-green);
+}
 
 a:hover {
-    color: var(--neon-green);
+    background-color: var(--white);
 }
 
-a:focus {}
+a:focus {
+    background-color: var(--light-neon-green);
+}
 
-a:active {}
-
+a:active {
+    background-color: var(--light-neon-green);
+}
 
 
 /* ## Components ##*/
 
-/* Header*/
+/* # Header #*/
 header {
+    margin: 0rem 1.5rem;
+    padding: 1rem 0.5rem;
     display: flex;
     justify-content: space-between;
-    padding: 0rem 2.5rem;
-    margin: 0rem 1.5rem;
+    align-items: center;
     border-bottom: 1px solid var(--neon-green);
 }
 
-header a {
-    text-decoration: none;
-    color: var(--white);
-    margin: 1rem 0rem;
-}
-
 header ul {
-    padding: 0rem;
-    display: flex;
-    gap: 1rem;
+    display: none;
+}
+
+header a {
+    background: none;
+    color: var(--white);
+}
+
+header a:visited {
+    background: none;
+    color: var(--white);
+}
+
+header a:hover {
+    background: none;
+    color: var(--neon-green);
+}
+
+header a:focus {
+    background: none;
+    color: var(--neon-green);
+}
+
+header a:active {
+    background: none;
+    color: var(--neon-green);
+}
+
+.hamburger-btn {
+    border: none;
+    background: none;
+}
+
+.hamburger-btn svg {
+    width: 2rem;
+}
+
+
+@media (min-width: 47rem) {
+    header {
+        padding: 0rem 2.5rem;
+    }
+
+    header ul {
+        padding: 0rem;
+        display: flex;
+        gap: 1rem;
+
+    }
+
+    header li {
+        list-style: none;
+    }
+
+    .hamburger-btn {
+        display: none;
+    }
+
 
 }
 
-header li {
-    list-style: none;
-}
 
-/* Main */
+/*# Main #*/
 
-/* */
+/* Introduction */
+
 .subtitle {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .bio {
-    font-size: 1.2rem;
+    margin-bottom: 3rem;
 }
 
 .section-intro {
+    padding: 2.5rem;
     display: flex;
     justify-content: center;
     position: relative;
     background-color: var(--dark-blue);
     background: linear-gradient(180deg, var(--dark-blue) 12%, var(--blue) 100%);
-    padding: 5rem;
-
-}
-
-.section-intro div {
-    max-width: 70%;
 }
 
 .section-intro::after {
@@ -110,7 +188,41 @@ header li {
     background-repeat: repeat-x;
 }
 
+.image-intro {
+    display: none;
+}
 
+@media (min-width: 47rem) {
+    .section-intro div {
+        max-width: 70%;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .bio {
+        font-size: 1.2rem;
+        max-width: 42rem;
+
+    }
+
+    .section-intro {
+        padding: 5rem;
+    }
+
+    .image-intro {
+        display: block;
+    }
+
+    .image-intro img {
+        max-height: 25rem;
+    }
+
+}
+
+
+/* Projects */
 .section-projects {
     padding: 1rem;
     padding-top: 3rem;
@@ -119,12 +231,42 @@ header li {
 
 .project-gallery {
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 3rem;
 }
 
-/* Footer */
+.project-gallery article {
+    background-color: var(--blue);
+    padding-bottom: 2rem;
+}
+
+.github-btn {
+    display: inline-flex;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    padding: 0.2rem;
+}
+
+.github-btn img {
+    width: 2rem;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.project-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+
+/*# Footer #*/
 footer {
     background-color: var(--neon-green);
     color: var(--dark-blue);
