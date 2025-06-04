@@ -2,7 +2,6 @@
 :root {
     --dark-blue: #010E3C;
     --neon-green: #DDFF00;
-    --light-neon-green: #edfb92;
     --blue: #3F00FD;
     --white: #ffffff;
 }
@@ -12,7 +11,7 @@ html {
 }
 
 body {
-    font-family: "Bai Jamjuree", sans-serif;
+    font-family: 'Bai Jamjuree', 'Trebuchet MS', Arial, sans-serif;
     background-color: var(--dark-blue);
     color: var(--white);
 
@@ -24,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Pirata One", system-ui;
+    font-family: "Pirata One", "Bookman Old Style", system-ui;
 }
 
 h1 {
@@ -58,6 +57,7 @@ a {
     border-radius: 1.25rem;
     text-decoration: none;
     color: var(--dark-blue);
+    border: var(--neon-green) 3px solid;
 }
 
 a:visited {
@@ -66,15 +66,14 @@ a:visited {
 
 a:hover {
     background-color: var(--white);
+    border-color: var(--white);
 }
 
-a:focus {
-    background-color: var(--light-neon-green);
-    border: var(--dark-blue) 3px solid;
-}
-
+a:focus,
 a:active {
-    background-color: var(--light-neon-green);
+    background-color: var(--white);
+    border-color: var(--dark-blue);
+    filter: drop-shadow(0 0 0.5rem var(--white));
 }
 
 
@@ -97,6 +96,7 @@ header ul {
 header a {
     background: none;
     color: var(--white);
+    border: none;
 }
 
 header a:visited {
@@ -109,13 +109,9 @@ header a:hover {
     color: var(--neon-green);
 }
 
-header a:focus {
-    background: none;
-    text-decoration: overline wavy;
-    color: var(--neon-green);
-}
-
+header a:focus,
 header a:active {
+    filter: none;
     background: none;
     text-decoration: overline wavy;
     color: var(--neon-green);
@@ -234,17 +230,35 @@ header a:active {
 }
 
 .project-gallery {
+    margin-bottom: 3rem;
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 3rem;
 }
 
-/* TODO: Add margin and fixed sizing */
+
 .project-gallery article {
     background-color: var(--blue);
-    padding-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    width: 18rem;
+}
+
+.proj-img-container {
+    height: 21rem;
+    overflow: hidden;
+}
+
+.proj-img-container img {
+    width: 100%;
+}
+
+.proj-info-container {
+    padding: 1rem;
+}
+
+.proj-info-container h3 {
+    margin-top: 0;
 }
 
 .github-btn {
@@ -269,10 +283,6 @@ header a:active {
     gap: 0.5rem;
 }
 
-@media (min-width: 47em) {
-    /* TODO: move in desktop specific styles */
-
-}
 
 
 /*# Footer #*/
