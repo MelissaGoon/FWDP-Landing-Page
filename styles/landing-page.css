@@ -1,0 +1,135 @@
+/*## Base ##*/
+:root {
+    --dark-blue: #010E3C;
+    --neon-green: #DDFF00;
+    --blue: #3F00FD;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    background-color: var(--dark-blue);
+    color: var(--white);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Pirata One", system-ui;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+/* Links*/
+a {}
+
+a:visited {}
+
+a:hover {
+    color: var(--neon-green);
+}
+
+a:focus {}
+
+a:active {}
+
+
+
+/* ## Components ##*/
+
+/* Header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 2.5rem;
+    margin: 0rem 1.5rem;
+    border-bottom: 1px solid var(--neon-green);
+}
+
+header a {
+    text-decoration: none;
+    color: var(--white);
+    margin: 1rem 0rem;
+}
+
+header ul {
+    padding: 0rem;
+    display: flex;
+    gap: 1rem;
+
+}
+
+header li {
+    list-style: none;
+}
+
+/* Main */
+
+/* */
+.subtitle {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.bio {
+    font-size: 1.2rem;
+}
+
+.section-intro {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: var(--dark-blue);
+    background: linear-gradient(180deg, var(--dark-blue) 12%, var(--blue) 100%);
+    padding: 5rem;
+
+}
+
+.section-intro div {
+    max-width: 70%;
+}
+
+.section-intro::after {
+    /* Adapted from : https://codepen.io/ongtiffany/pen/rOwryp */
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    width: 100%;
+    content: " ";
+    background:
+        radial-gradient(circle at 50%, var(--dark-blue) 45%, var(--blue) 46%, var(--blue) 50%);
+    background-size: 3rem 6rem;
+    height: 3rem;
+    background-repeat: repeat-x;
+}
+
+
+.section-projects {
+    padding: 1rem;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.project-gallery {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--neon-green);
+    color: var(--dark-blue);
+    padding: 2rem;
+    padding-top: 4rem;
+    text-align: center;
+
+}
