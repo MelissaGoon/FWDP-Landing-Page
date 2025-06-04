@@ -70,6 +70,7 @@ a:hover {
 
 a:focus {
     background-color: var(--light-neon-green);
+    border: var(--dark-blue) 3px solid;
 }
 
 a:active {
@@ -110,11 +111,13 @@ header a:hover {
 
 header a:focus {
     background: none;
+    text-decoration: overline wavy;
     color: var(--neon-green);
 }
 
 header a:active {
     background: none;
+    text-decoration: overline wavy;
     color: var(--neon-green);
 }
 
