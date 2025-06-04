@@ -40,7 +40,7 @@ h3 {
     font-size: 1.5rem;
 }
 
-@media (min-width: 47rem) {
+@media (min-width: 47em) {
     h1 {
         font-size: 5rem;
     }
@@ -130,8 +130,9 @@ header a:active {
     width: 2rem;
 }
 
+/* TODO: add hamburger menu from news */
 
-@media (min-width: 47rem) {
+@media (min-width: 47em) {
     header {
         padding: 0rem 2.5rem;
     }
@@ -195,7 +196,7 @@ header a:active {
     display: none;
 }
 
-@media (min-width: 47rem) {
+@media (min-width: 47em) {
     .section-intro div {
         max-width: 70%;
     }
@@ -240,6 +241,7 @@ header a:active {
     margin-bottom: 3rem;
 }
 
+/* TODO: Add margin and fixed sizing */
 .project-gallery article {
     background-color: var(--blue);
     padding-bottom: 2rem;
@@ -267,6 +269,10 @@ header a:active {
     gap: 0.5rem;
 }
 
+@media (min-width: 47em) {
+    /* TODO: move in desktop specific styles */
+
+}
 
 
 /*# Footer #*/
