@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,21 +17,32 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize-fwd.css">
     <link rel="stylesheet" href="styles/landing-page.css">
+    <script src="scripts/navigation.js" defer></script>
 </head>
 
 <body>
     <header>
         <a href="landing-page.html" class="logo-container">Home</a>
-        <nav>
-
-            <button class="hamburger-btn">
-                <svg width="37" height="28" viewBox="0 0 37 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <nav class="site-navigation" id="site-navigation">
+            <!-- Hamburger menu adapted from FWDP 1000 day-04 files-->
+            <button class="menu-toggle" aria-controls="header-menu" aria-expanded="false" aria-label="Menu Toggle">
+                <svg class="menu-icon" width="37" height="28" viewBox="0 0 37 28" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 1.5L35 1.5M2 14L35 14M2 26.5L35 26.5" stroke="#DDFF00" stroke-width="3"
                         stroke-linecap="round" />
+                    <title>Menu Icon</title>
                 </svg>
+
+                <svg class="close-icon" width="27" height="27" viewBox="0 0 27 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.83276 25.1673L25.1673 1.83274M2.00003 2L25.3345 25.3345" stroke="#DDFF00"
+                        stroke-width="3" stroke-linecap="round" />
+                    <title>Close Menu Icon</title>
+                </svg>
+
             </button>
 
-            <ul>
+            <ul class="nav-menu" id="header-menu">
                 <li><a href="#">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#">Other Works</a></li>

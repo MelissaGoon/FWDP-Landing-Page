@@ -89,10 +89,7 @@ header {
     border-bottom: 1px solid var(--neon-green);
 }
 
-header ul {
-    display: none;
-}
-
+/* Header Links */
 header a {
     background: none;
     color: var(--white);
@@ -117,34 +114,73 @@ header a:active {
     color: var(--neon-green);
 }
 
-.hamburger-btn {
+/* Mobile Menu Styles */
+/* Hamburger menu adapted from FWDP 1000 day-04 files */
+.menu-toggle {
     border: none;
     background: none;
 }
 
-.hamburger-btn svg {
+.menu-toggle svg {
     width: 2rem;
 }
 
-/* TODO: add hamburger menu from news */
+.nav-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: var(--dark-blue);
+    border-top: 1px solid var(--neon-green);
+}
+
+.nav-menu li {
+    list-style: none;
+    padding: 1rem;
+}
+
+.nav-menu a {
+    padding: 1rem;
+}
+
+.close-icon {
+    display: none;
+}
+
+.menu-icon {
+    display: block;
+}
+
+.site-navigation.toggled ul {
+    display: block;
+}
+
+.site-navigation.toggled .menu-icon {
+    display: none;
+}
+
+.site-navigation.toggled .close-icon {
+    display: block;
+}
+
+
 
 @media (min-width: 47em) {
     header {
         padding: 0rem 2.5rem;
     }
 
-    header ul {
+    .nav-menu {
+        position: static;
         padding: 0rem;
         display: flex;
-        gap: 1rem;
-
+        gap: 0.5rem;
+        border: none;
+        margin: 0rem;
     }
 
-    header li {
-        list-style: none;
-    }
-
-    .hamburger-btn {
+    .menu-toggle {
         display: none;
     }
 
