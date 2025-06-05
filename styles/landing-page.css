@@ -122,7 +122,8 @@ header a:active {
 }
 
 .menu-toggle svg {
-    width: 2rem;
+    max-width: 2rem;
+    cursor: pointer;
 }
 
 .nav-menu {
@@ -281,12 +282,12 @@ header a:active {
 }
 
 .proj-img-container {
-    height: 21rem;
+    max-height: 21rem;
     overflow: hidden;
 }
 
 .proj-img-container img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .proj-info-container {
@@ -297,21 +298,6 @@ header a:active {
     margin-top: 0;
 }
 
-.github-btn {
-    display: inline-flex;
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 50%;
-    padding: 0.2rem;
-}
-
-.github-btn img {
-    width: 2rem;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
 .project-btns {
     display: flex;
     justify-content: center;
@@ -319,7 +305,20 @@ header a:active {
     gap: 0.5rem;
 }
 
+.github-btn {
+    display: inline-flex;
+    max-width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    padding: 0.2rem;
+}
 
+.github-btn img {
+    max-width: 75%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
 
 /*# Footer #*/
 footer {
