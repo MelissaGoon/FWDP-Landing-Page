@@ -83,11 +83,16 @@ a:active {
 header {
     margin: 0rem 1.5rem;
     padding: 1rem 0.5rem;
+    border-bottom: 1px solid var(--neon-green);
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--neon-green);
+    margin: auto;
 }
+
 
 /* Header Links */
 header a {
@@ -171,6 +176,10 @@ header a:active {
 @media (min-width: 47em) {
     header {
         padding: 1rem 2.5rem;
+    }
+
+    .header-content {
+        max-width: 105rem;
     }
 
     .nav-menu {
@@ -269,6 +278,9 @@ header a:active {
     padding: 1rem;
     padding-top: 3rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .project-gallery {
@@ -277,13 +289,17 @@ header a:active {
     gap: 3rem;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 105rem;
 }
 
 
 .project-gallery article {
     background-color: var(--blue);
     margin-bottom: 1.5rem;
-    width: 18rem;
+    max-width: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .proj-img-container {
@@ -332,5 +348,41 @@ footer {
     padding: 2rem;
     padding-top: 4rem;
     text-align: center;
+}
 
+footer ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer li {
+    list-style: none;
+}
+
+.contact svg {
+    height: auto;
+    width: 3rem;
+
+}
+
+.contact a {
+    padding: 0.5rem;
+    display: inline-block;
+    min-height: fit-content;
+    border: 2px solid var(--neon-green);
+    border-radius: 100%;
+}
+
+.contact a:hover {
+    background: var(--white);
+    border-color: var(--dark-blue);
+}
+
+.contact a:focus {
+    background-color: var(--white);
+    border-color: var(--dark-blue);
+    filter: drop-shadow(0 0 0.5rem var(--blue));
 }
