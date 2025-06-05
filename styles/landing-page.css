@@ -138,11 +138,12 @@ header a:active {
 
 .nav-menu li {
     list-style: none;
-    padding: 1rem;
+    margin: 1rem;
 }
 
 .nav-menu a {
     padding: 1rem;
+
 }
 
 .close-icon {
@@ -169,15 +170,19 @@ header a:active {
 
 @media (min-width: 47em) {
     header {
-        padding: 0rem 2.5rem;
+        padding: 1rem 2.5rem;
     }
 
     .nav-menu {
         position: static;
         padding: 0rem;
         display: flex;
-        gap: 0.5rem;
+        gap: 1rem;
         border: none;
+        margin: 0rem;
+    }
+
+    .nav-menu li {
         margin: 0rem;
     }
 
